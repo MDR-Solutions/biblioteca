@@ -32,25 +32,25 @@
         </ul>
     </nav>
     
-<form action="FORMULARIO REGISTRO SOCIOS">
+<form action="insertar.php" method="post">
     <p1>
     <label for="nombre">Nombre</label><br>
     <input type="text" id="nombre" name="nombre" value=""><br>
     </p1>
     <p2>
     <label for="apellido1">Primer apellido</label><br>
-    <input type="text" id="primerapellido" name="primerapellido" value="" placeholder=""><br>
+    <input type="text" id="apellido1" name="apellido1" value="" placeholder=""><br>
     </p2>
     <label for="apellido2">Segundo apellido</label><br>
-    <input type="text" id="segundo apellido" name="Segundo Apellido" value=""><br>
-    <label for="DNI">DNI</label><br>
-    <input type="text" id="DNI" name="DNI" value=""placeholder="Ej:46787635J"><br>
-    <label for="Direccion">Direccion</label><br>
-    <input type="text" id="Direccion" name="Direccion" value=""placeholder=""><br>
-    <label for="Telefono">Telefono</label><br>
-    <input type="text" id=Telefono name="Telefono" value=""placeholder="Ej:690567342"><br>
-    <label for="Preferencias">Preferencias</label><br>
-    <input type="text" id=Preferencias name="Preferencias" value=""placeholder="Ej:Accion,Ficcion,Psicologia"><br><br>
+    <input type="text" id="apellido2" name="apellido2" value=""><br>
+    <label for="dni">DNI</label><br>
+    <input type="text" id="dni" name="dni" value=""placeholder="Ej:46787635J"><br>
+    <label for="dirección">Direccion</label><br>
+    <input type="text" id="dirección" name="dirección" value=""placeholder=""><br>
+    <label for="telefono">Telefono</label><br>
+    <input type="text" id=telefono name="telefono" value=""placeholder="Ej:690567342"><br>
+    <label for="preferencias">Preferencias</label><br>
+    <input type="text" id=preferencias name="preferencias" value=""placeholder="Ej:Accion,Ficcion,Psicologia"><br><br>
     <button type="Registrarse" value="Registrarse">  <a href="socioexito.html">Crear Cuenta</a></button>
 </form> 
     <footer>
