@@ -1,4 +1,15 @@
 <?php
-$conexion = mysqli_connect("localhost","root","","bdreto");
-mysqli_set_charset($conexion,"utf8");
+$server = "localhost";
+$user = "root";
+$pass = "";
+$db = "bdreto";
+
+$conexion = new mysqli($server, $user, $pass, $db);
+
+if($conexion->connect_errno){
+    die("Conexion Fallida". $conexion->connect_errno);
+} else{
+    echo "";
+}
+
 ?>
