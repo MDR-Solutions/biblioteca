@@ -10,4 +10,6 @@
     $insertar="INSERT INTO usuarios(nombre,apellido1,apellido2,dirección,telefono,dni,preferencias)values('$nombre', '$apellido1','$apellido2',' $dirección','$telefono','$dni','$preferencias')";
     mysqli_query($conexion,$insertar);
     mysqli_close($conexion);
+
+    
 ?>
