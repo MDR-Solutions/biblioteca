@@ -28,6 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
 
+            // Depuración: Mostrar valores que se están comparando
+            // (Eliminar estas líneas en producción)
+            echo "Contraseña ingresada: " . $contraseña . "<br>";
+            echo "Hash en la base de datos: " . $user['contraseña'] . "<br>";
+
             // Verificar la contraseña
             if (password_verify($contraseña, $user['contraseña'])) {
                 session_start();
