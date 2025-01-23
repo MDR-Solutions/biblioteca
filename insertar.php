@@ -9,10 +9,11 @@
     $telefono = $_POST["telefono"];
     $dni = $_POST["dni"];
     $preferencias = $_POST["preferencias"];
+    $contraseña =$_POST["contraseña"]
 
     // Crear la consulta de inserción
     $insertar = "INSERT INTO usuarios(nombre, apellido1, apellido2, direccion, telefono, dni, preferencias)
-                 VALUES('$nombre', ,'$apellido1', '$apellido2', '$direccion', '$telefono', '$dni', '$preferencias')";
+                 VALUES('$nombre', ,'$apellido1', '$apellido2', '$direccion', '$telefono', '$dni', '$preferencias','$contraseña')";
 
     // Ejecutar la consulta
     $resultado = mysqli_query($conexion, $insertar);
