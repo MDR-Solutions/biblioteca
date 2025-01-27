@@ -9,7 +9,7 @@
     $telefono = $_POST["telefono"];
     $dni = $_POST["dni"];
     $preferencias = $_POST["preferencias"];
-    $contraseña = $_POST["contraseña"];
+    $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
 
     // Crear la consulta de inserción
     $insertar = "INSERT INTO usuarios(nombre, apellido1, apellido2, direccion, telefono, dni, preferencias,contraseña)

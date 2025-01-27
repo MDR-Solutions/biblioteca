@@ -37,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (password_verify($contraseña, $user['contraseña'])) {
                 session_start();
                 $_SESSION['dni'] = $user['dni'];
-                echo "¡Login exitoso! Bienvenido, usuario con DNI: " . htmlspecialchars($user['dni']);
+                header("Location:socioexito.html");
+                exit();
             } else {
                 echo "Contraseña incorrecta.";
             }

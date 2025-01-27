@@ -11,11 +11,12 @@
         <title>Formulario Socio</title>
         <link rel="stylesheet" href="formulario.css">
         <link rel="icon" href="IMAGENES/pikaso_texttoimage_un-logo-de-una-empresa-de-informatica-llamada-MDR - copia.jpeg" type="image/x-icon">
+        <script src="quienessomos.js"></script>
     </head>
 </head>
 <body>
     <header>
-        <h2>Rellena con tus datos para ser socio</h2>
+        <h2>Rellena con tus datos para ser socio </h2>
 
     </header>
     <nav>
@@ -29,27 +30,24 @@
     </nav>
     
 <form action="insertar.php" method="post">
-    <p1>
-    <label for="nombre">Nombre</label><br>
-    <input type="text" id="nombre" name="nombre" value=""><br>
-    </p1>
-    <p2>
-    <label for="apellido1">Primer apellido</label><br>
-    <input type="text" id="apellido1" name="apellido1" value="" placeholder=""><br>
-    </p2>
-    <label for="apellido2">Segundo apellido</label><br>
-    <input type="text" id="apellido2" name="apellido2" value=""><br>
-    <label for="dni">DNI</label><br>
-    <input type="text" id="dni" name="dni" value=""placeholder="Ej:46787635J"><br>
-    <label for="direccion">Direccion</label><br>
-    <input type="text" id="direccion" name="direccion" value=""placeholder=""><br>
-    <label for="telefono">Telefono</label><br>
-    <input type="text" id=telefono name="telefono" value=""placeholder="Ej:690567342"><br>
-    <label for="preferencias">Preferencias</label><br>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" value="" placeholder="Manolo">
+    <label for="apellido1">Primer apellido</label>
+    <input type="text" id="apellido1" name="apellido1" value="" placeholder="Garcia">
+    <label for="apellido2">Segundo apellido</label>
+    <input type="text" id="apellido2" name="apellido2" value="" placeholder="Lopez">
+    <label for="dni">DNI</label>
+    <input type="text" id="dni" name="dni" value=""placeholder="Ej:46787635J">
+    <label for="direccion">Direccion</label>
+    <input type="text" id="direccion" name="direccion" value=""placeholder="">
+    <label for="telefono">Telefono</label>
+    <input type="text" id=telefono name="telefono" value=""placeholder="Ej:690567342">
+    <label for="preferencias">Preferencias</label>
     <input type="text" id=preferencias name="preferencias" value=""placeholder="Ej:Accion,Ficcion,Psicologia">
-    <label for="contraseña">Contraseña:</label><br>
-    <input type="text" id=contraseña name="contraseña" value=""placeholder=""><br><br><br>
-    <button type="submit">Crear Cuenta</button>
+    <label for="contraseña">Contraseña:</label>
+    <input type="text" id=contraseña name="contraseña" value=""placeholder=""><br>
+    <button type="submit">Crear Cuenta</button> <br>
+    <button type="submit"><a href="login.html">¿Ya tienes cuenta?</a></button>
     
 </form> 
     <footer>
@@ -57,5 +55,6 @@
         <a class="Etiquetas" href="https://www.facebook.com/muskiz.bizkaia/?locale=es_LA" target="_blank"><img class="ubi" src="IMAGENES/Facebook_Logo_(2019).png" alt="gps"></a>
         <a class="Etiquetas" href="https://maps.app.goo.gl/vuhthBsoVppb65tg9" target="_blank"><img class="ubi" src="IMAGENES/500745.png" alt="gps"></a>
         <a class="Etiquetas" href="https://workspace.google.com/intl/es/gmail/" target="_blank">mdr_solutions@gmail.com</a>
+        <button type="button" onclick="empresa()">web desarrollada</button>
     </footer>
 </body>
