@@ -71,7 +71,7 @@ article{
     width: 40%; /* El tamaño en relación con el contenedor */
     height:80%;
     margin-left: 55%;
-    
+    transition: transform 0.5s ease-in-out;
 }
 footer{
     background-color: chocolate;
@@ -81,11 +81,6 @@ footer{
     position: fixed; /*Para dejarlo fijado en todo momento*/
     bottom: 0%;
 }
-
-.ubi{
-    
-}   
-
 .Etiquetas {
     padding-left: 2%;
 }
@@ -102,4 +97,7 @@ section{
     padding-bottom: 1%;
     width:96%;
     margin-bottom: 7%;   
+}
+.LOGOMDR:hover{
+    transform: rotate(360deg);
 }
