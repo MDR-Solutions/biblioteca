@@ -13,7 +13,11 @@ header h1 {
 
 nav{
     background-color: chocolate;
-    font-size: 200%;  
+    font-size: 300%;  
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
 }
 
 nav a{
@@ -30,11 +34,7 @@ ul {
   overflow: hidden;
 }
    
-li {
-  float: left;
-  margin-left: 7%;
-  padding: 16px;
-}
+
 
 li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
   background-color:black;
@@ -60,12 +60,17 @@ section{
     padding-top: 1%;
     padding-bottom: 1%;
     width:60%;
-    float:left;
     margin-bottom: 3%;   
 }
 
 h2{
     font-size:50px;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #foto2{
@@ -99,7 +104,6 @@ aside{
     padding-right: 2%;
     padding-left: 2%;
     padding-bottom: 2%;
-    float: right; /*Para situarlo a la derecha si hay espacio*/
     font-size: 25px; 
 }    
 
@@ -118,4 +122,30 @@ footer{
 
 .Etiquetas {
     padding-left: 2%;
+}
+
+@media (max-width:800px){
+    .informacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+    aside{
+        width: 96%;
+    }
+    section{
+        width: 96%;
+    }
+    section p, section h2, aside p, aside h3{
+        font-size: medium;
+    }
+    nav{
+        display: flex;
+        font-size: 200%;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
