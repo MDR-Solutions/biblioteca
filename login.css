@@ -1,3 +1,74 @@
+
 body{
-    background-color: salmon;
+    background-color:  rgb(235, 167, 119);
+}
+.cuenta-exito {
+    border: 1px solid black;
+    background-color: burlywood;
+    color: white;
+    padding: 3%;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    font-family: "Lucida Console", "Courier New", monospace;;
+}
+nav{
+    background-color: chocolate;
+    font-size: 200%;  
+}
+
+nav a{
+    color: white;
+    text-shadow: 2px 2px 2px; /*Sombreado del texto*/
+    text-decoration: none;
+}
+
+nav ul li{
+    display: inline; /*Juntarlos en una linea y no uno encima del otro*/
+}
+
+ul {
+  overflow: hidden;
+}
+   
+li {
+  float: left;
+  margin-left: 7%;
+  padding: 16px;
+}
+
+li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
+  background-color:black;
+}
+#ubi{
+    width: 4%;
+}       
+footer{
+    background-color: chocolate;
+    clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
+    width:95%; 
+    padding:2%;
+    position: fixed; /*Para dejarlo fijado en todo momento*/
+    bottom: 0%;
+}
+
+.ubi{
+    width: 2%;
+}   
+
+.Etiquetas {
+    padding-left: 2%;
+}
+header h1 {
+    color: black;
+    font-size: 300%;  
+}
+header {
+    background-color: chocolate;
+    width: 98%; /*width de 98 debido a que padding por cada lado 1% en total 100%*/
+    margin: auto; /*auto para centrar*/
+    padding: 1%;
+    margin-bottom: 14px;
 }
