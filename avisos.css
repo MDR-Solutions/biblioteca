@@ -51,38 +51,46 @@ footer{
     margin-bottom: 14px;
 }
 
+header {
+    background-color: chocolate;
+    width: 98%; /*width de 98 debido a que padding por cada lado 1% en total 100%*/
+    margin: auto; /*auto para centrar*/
+    padding: 1%;
+    margin-bottom: 14px;
+}
+
 header h1 {
     color: black;
-    font-size: 300%;
+    font-size: 300%;  
 }
 
-nav {
+nav{
     background-color: chocolate;
-    font-size: 200%;
+    font-size: 300%;  
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
 }
 
-nav a {
+nav a{
     color: white;
-    text-shadow: 2px 2px 2px;
+    text-shadow: 2px 2px 2px; /*Sombreado del texto*/
     text-decoration: none;
 }
 
-nav ul li {
-    display: inline;
+nav ul li{
+    display: inline; /*Juntarlos en una linea y no uno encima del otro*/
 }
 
 ul {
-    overflow: hidden;
+  overflow: hidden;
 }
+   
 
-li {
-    float: left;
-    margin-left: 7%;
-    padding: 16px;
-}
 
-li a:hover {
-    background-color: black;
+li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
+  background-color:black;
 }
 
 footer {
@@ -180,3 +188,20 @@ container {
 .rectangulo img {
     width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
     height: auto;
+}
+footer{
+    background-color: chocolate;
+    clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
+    width:95%; 
+    padding:2%;
+    position: fixed; /*Para dejarlo fijado en todo*/
+    bottom: 0%;
+}
+
+.ubi{
+    width: 2%;
+}   
+
+.Etiquetas {
+    padding-left: 2%;
+}
