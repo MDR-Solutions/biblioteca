@@ -73,6 +73,7 @@ article{
 }
 .mapaint{
     display: grid;
+    width: 49%;
 }
 .LOGOMDR {
     display: grid;
@@ -130,10 +131,13 @@ footer{
 }
 
 @media (max-width:800px){
-    .LOGOMDR{
+    .container{
         display: flex;
         flex-direction: column;
         justify-content: center; 
+    }
+    .mapaint{
+        height: 5%;
     }
     aside{
         width: 96%;
