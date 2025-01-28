@@ -4,11 +4,13 @@ header {
     margin: auto; /*auto para centrar*/
     padding: 1%;
     margin-bottom: 14px;
+    
 }
 
 header h1 {
     color: black;
     font-size: 300%;  
+    text-align: center;
 }
 
 nav{
