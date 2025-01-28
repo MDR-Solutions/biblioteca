@@ -97,3 +97,80 @@ header h1 {
     color: black;
     font-size: 300%;  
 }
+
+/* Contenedor del rectángulo */
+.rectangulo {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 95%;
+    max-width: 150%;
+    margin-left: 1%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;  /* Evita que el texto sobresalga */
+}
+
+/* Imagen dentro del rectángulo */
+.rectangulo img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor de texto oculto inicialmente */
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Efecto al pasar el ratón */
+.rectangulo:hover .texto {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Efecto en la imagen al hacer hover */
+.rectangulo:hover img {
+    transform: scale(1.1);
+    filter: blur(3px);
+}
+
+/* Contenedor principal: activa flexbox */
+container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
+    justify-content: center; /* Centra los elementos en la fila */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+}
+
+/* Cada rectángulo ahora se ajusta en línea */
+.rectangulo {
+    display: flex;
+    flex-direction: column; /* Coloca imagen arriba y texto abajo */
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* Ajusta el tamaño de cada elemento */
+    text-align: center;
+}
+
+/* Imagen ahora se centra */
+.rectangulo img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto;
