@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="GRUPO-2 MDR-SOLUTIONS"> 
-        <meta name="fecha" content="16-10-2024">
-        <meta name="reto1" content="Web-1">
-        <meta name="keywords" content="biblioteca,municipal,ayuntamiento,libros">
-        <title>Formulario Socio</title>
-        <link rel="stylesheet" href="formulario.css">
-        <link rel="icon" href="IMAGENES/pikaso_texttoimage_un-logo-de-una-empresa-de-informatica-llamada-MDR - copia.jpeg" type="image/x-icon">
-        <script src="quienessomos.js"></script>
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="GRUPO-2 MDR-SOLUTIONS">
+    <meta name="fecha" content="16-10-2024">
+    <meta name="reto1" content="Web-1">
+    <meta name="keywords" content="biblioteca,municipal,ayuntamiento,libros">
+    <title>Quienes somos MDR</title>
+    <link rel="stylesheet" href="quienessomostilo.css">
+    <link rel="icon" href="IMAGENES/pikaso_texttoimage_un-logo-de-una-empresa-de-informatica-llamada-MDR-copia.jpeg" type="image/x-icon">
+    <script src="quienessomos.js"></script>
 </head>
 <body>
     <header>
-        <h2>Rellena con tus datos para ser socio </h2>
-
+        <h1>QUIENES SOMOS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienessomos.html">Quienes somos</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="socios.html">Mi cuenta</a></li>
+                <li><a href="avisos.html">Avisos</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">inicio</a></li>
-            <li><a href="quienessomos.html">Quienes somos</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li>Mi cuenta</li>
-            <li><a href="avisos.html">Avisos</a></li>
-        </ul>
-    </nav>
-    
-<form action="insertar.php" method="post">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Ej:Juan Ignacio" placeholder="Manolo " required>
-   
-    <label for="apellido1" class="required">apellido1</label>
-    <input type="text" id="apellido1" name="apellido1" placeholder="Ej:Albin" placeholder="Garcia" required>
-   
-    <label for="apellido1" class="required">apellido2</label>
-    <input type="text" id="apellido2" name="apellido2" placeholder="Ej:Garcia" placeholder="Garcia" required>
-   
-    <label for="DNI" class="required">DNI</label>
-    <input type="text" id="DNI" name="DNI" placeholder="Ej:12345678X" placeholder="12345678X" required>
-   
-    <label for="Direccion" class="required">Direccion</label>
-    <input type="text" id="Direccion" name="Direccion" placeholder="Ej:Muskizko udala" placeholder="Muskizko udala" required>
-   
-    <label for="Telefono" class="required">Telefono</label>
-    <input type="text" id="Telefono" name="Telefono" placeholder="Ej:123456789" placeholder="123456789" required>
-   
-    <label for="Preferencias" class="required">Preferencias</label>
-    <input type="text" id="Preferencias" name="Preferencias" placeholder="Ej:Accion,Ficcion,Psicologia placeholder"="Accion,Ficcion,Psicologia placeholder" required>
-   
-    <label for="Contraseña">Contraseña</label>
-    <input type="text" id="Contraseña" name="contraseña" placeholder="Ej:Contraseña" placeholder="Ej:Contraseña" required>
-    
-    <button type="submit">Crear Cuenta</button> <br>
-    <button type="submit"><a href="login.html">¿Ya tienes cuenta?</a></button>
-    
-</form> 
+    <section class="container">
+        <p>Nuestra empresa llamada MDR-SOLUTIONS fue creada por Diego Larrabeiti, Meder Gómez, David Álvarez y Mikel González, alumnos del Centro Formación Somorrostro DAM3. Nos dedicamos a ayudar al ayuntamiento de Muskiz a dar el salto tecnológico y desarrollar webs, además de facilitar el uso de la biblioteca municipal.</p>
+        <div class="myf">
+            <iframe class="mapaint" src="https://www.google.com/maps/embed?pb=..."></iframe>
+        </div>
+        <div>
+            <img class="LOGOMDR" src="IMAGENES/pikaso_texttoimage_un-logo-de-una-empresa-de-informatica-llamada-MDR-copia.jpeg" alt="Logo MDR">
+        </div>
+        <article class="ubicación">
+            <p>La ubicación de nuestra empresa está situada en C. Eladio Laredo, 6, 39700 Castro-Urdiales, Cantabria. También se ve en el mapa de arriba.</p>
+        </article>
+    </section>
     <footer>
-        <a class="Etiquetas" href="https://www.instagram.com/muskizudala/" target="_blank"><img class="ubi" src="IMAGENES/insta.png" alt="ig"></a>
-        <a class="Etiquetas" href="https://www.facebook.com/muskiz.bizkaia/?locale=es_LA" target="_blank"><img class="ubi" src="IMAGENES/Facebook_Logo_(2019).png" alt="gps"></a>
-        <a class="Etiquetas" href="https://maps.app.goo.gl/vuhthBsoVppb65tg9" target="_blank"><img class="ubi" src="IMAGENES/500745.png" alt="gps"></a>
-        <a class="Etiquetas" href="https://workspace.google.com/intl/es/gmail/" target="_blank">mdr_solutions@gmail.com</a>
-        <button type="button" onclick="empresa()">web desarrollada</button>
+        <a class="Etiquetas" href="https://www.instagram.com/muskizudala" target="_blank"><img class="ubi" src="IMAGENES/insta.png" alt="Instagram"></a>
+        <a class="Etiquetas" href="https://www.facebook.com/muskiz.bizkaialocale=es_LA" target="_blank"><img class="ubi" src="IMAGENES/Facebook_Logo_(2019).png" alt="Facebook"></a>
+        <a class="Etiquetas" href="https://maps.app.goo.gl/vuhthBsoVppb65tg9" target="_blank"><img class="ubi" src="IMAGENES/500745.png" alt="Google Maps"></a>
+        <a class="Etiquetas" href="mailto:mdr_solutions@gmail.com" target="_blank">mdr_solutions@gmail.com</a>
+        <button type="button" onclick="empresa()">Web desarrollada</button>
     </footer>
 </body>
+</html>
