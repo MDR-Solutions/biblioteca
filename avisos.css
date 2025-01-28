@@ -1,136 +1,103 @@
-
-form{ 
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #00fff2;
-    border: 1px solid #00fff2;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 10%;
-    border:1px solid black;
-}
-
-  /* Contenedor del rectángulo */
-  .rectangulo {
-    display: flex;                 /* Alinea los elementos en una fila */
-    align-items: center;           /* Centra verticalmente la imagen y el texto */
-    background-color: #f4f4f4;     /* Color de fondo del rectángulo */
-    border-radius: 10px;           /* Bordes redondeados */
-    padding: 20px;                 /* Espacio interno alrededor del contenido */
-    width: 95%;                    /* Ancho del rectángulo */
-    max-width: 150%;              /* Ancho máximo del rectángulo */    
-    margin-left: 1%;
-    margin-top: 5%;
-    margin-bottom:10%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-}
-
-/* Estilo para la imagen dentro del rectángulo */
-.rectangulo img {
-    width: 150px;                  /* Ancho de la imagen */
-    height: auto;                  /* Mantiene la proporción de la imagen */
-    margin-right: 20px;            /* Espacio entre la imagen y el texto */
-    border-radius: 5px;            /* Bordes redondeados para la imagen */
-}
-
-/* Estilo para el contenedor de texto */
-.texto {
-    font-size: 1.1em;              /* Tamaño del texto */
-    color: #333;                   /* Color del texto */
-    line-height: 1.5;              /* Altura de línea para mejorar la legibilidad */
-}
-body{
-    background-color:burlywood;
-}
-footer{
-    background-color: chocolate;
-    clear:both;
-    width:95%; 
-    padding:2%;
-    position: fixed;
-    bottom: 0%;
-}
-.ubi{
-    width: 2%;
-}    
-.Etiquetas {
-    padding-left: 2%;
-}
-nav{
-    background-color: chocolate;
-    font-size: 200%;  
-}
-
-nav a{
-    color: white;
-    text-shadow: 2px 2px 2px; /*Sombreado del texto*/
-    text-decoration: none;
-}
-
-nav ul li{
-    display: inline; /*Juntarlos en una linea y no uno encima del otro*/
-}
-
-ul {
-  overflow: hidden;
-}
-   
-li {
-  float: left;
-  margin-left: 7%;
-  padding: 16px;
-}
-
-li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
-  background-color:black;
+body {
+    background-color: burlywood;
 }
 
 header {
     background-color: chocolate;
-    width: 98%; /*width de 98 debido a que padding por cada lado 1% en total 100%*/
-    margin: auto; /*auto para centrar*/
+    width: 98%;
+    margin: auto;
     padding: 1%;
     margin-bottom: 14px;
 }
+
 header h1 {
     color: black;
-    font-size: 300%;  
+    font-size: 300%;
 }
 
-/* Contenedor del rectángulo */
+nav {
+    background-color: chocolate;
+    font-size: 200%;
+}
+
+nav a {
+    color: white;
+    text-shadow: 2px 2px 2px;
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+ul {
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin-left: 7%;
+    padding: 16px;
+}
+
+li a:hover {
+    background-color: black;
+}
+
+footer {
+    background-color: chocolate;
+    clear: both;
+    width: 95%;
+    padding: 2%;
+    position: fixed;
+    bottom: 0%;
+}
+
+.ubi {
+    width: 2%;
+}
+
+.Etiquetas {
+    padding-left: 2%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
 .rectangulo {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 250px;
+    text-align: center;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    width: 95%;
-    max-width: 150%;
-    margin-left: 1%;
-    margin-top: 5%;
-    margin-bottom: 10%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    overflow: hidden;  /* Evita que el texto sobresalga */
+    overflow: hidden;
 }
 
-/* Imagen dentro del rectángulo */
 .rectangulo img {
-    width: 150px;
+    width: 100%;
     height: auto;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-/* Contenedor de texto oculto inicialmente */
 .texto {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 90%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -139,38 +106,62 @@ header h1 {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Efecto al pasar el ratón */
 .rectangulo:hover .texto {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Efecto en la imagen al hacer hover */
 .rectangulo:hover img {
     transform: scale(1.1);
     filter: blur(3px);
 }
 
-/* Contenedor principal: activa flexbox */
-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
-    justify-content: center; /* Centra los elementos en la fila */
-    gap: 20px; /* Espacio entre elementos */
-    padding: 20px;
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 200%;
+    }
+
+    nav {
+        font-size: 150%;
+    }
+
+    footer {
+        padding: 5%;
+    }
+
+    .rectangulo {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
-/* Cada rectángulo ahora se ajusta en línea */
-.rectangulo {
-    display: flex;
-    flex-direction: column; /* Coloca imagen arriba y texto abajo */
-    align-items: center;
-    justify-content: center;
-    width: 250px; /* Ajusta el tamaño de cada elemento */
-    text-align: center;
-}
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 150%;
+    }
 
-/* Imagen ahora se centra */
-.rectangulo img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
-    height: auto;
+    nav {
+        font-size: 120%;
+    }
+
+    footer {
+        padding: 5%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .rectangulo {
+        width: 100%;
+    }
+}
