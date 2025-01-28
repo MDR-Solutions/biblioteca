@@ -12,7 +12,7 @@ form{
 }
 
   /* Contenedor del rectángulo */
-  .rectangulo {
+.rectangulo {
     display: flex;                 /* Alinea los elementos en una fila */
     align-items: center;           /* Centra verticalmente la imagen y el texto */
     background-color: #f4f4f4;     /* Color de fondo del rectángulo */
@@ -174,3 +174,4 @@ container {
 .rectangulo img {
     width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
     height: auto;
+}
