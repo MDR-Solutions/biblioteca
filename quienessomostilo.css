@@ -73,6 +73,8 @@ article{
 }
 .mapaint{
     display: grid;
+    width: 95%;
+    height: 80%;
 }
 .LOGOMDR {
     display: grid;
