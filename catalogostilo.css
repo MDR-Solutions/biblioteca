@@ -111,3 +111,17 @@ footer{
 .Etiquetas {
     padding-left: 2%;
 }
+@media (max-width:800px){
+    nav{
+        display: flex;
+        font-size: 200%;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1{
+        text-align: center;
+    }
+}
