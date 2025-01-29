@@ -147,7 +147,7 @@ body{
     flex-direction: column; /* Coloca imagen arriba y texto abajo */
     align-items: center;
     justify-content: center;
-    width: 250px; /* Ajusta el tamaño de cada elemento */
+    width: 270px; /* Ajusta el tamaño de cada elemento */
     text-align: center;
 }
 
@@ -181,5 +181,8 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    h1{
+        text-align: center;
     }
 }
