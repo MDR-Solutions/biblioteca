@@ -1,36 +1,34 @@
 <?php
-    include("conexion.php");
+require_once("conexion.php");
 
-    // Obtener los datos enviados por POST
-    $nombre = $_POST["nombre"];
-    $apellido1 = $_POST["apellido1"];
-    $apellido2 = $_POST["apellido2"];
-    $direccion = $_POST["direccion"];
-    $telefono = $_POST["telefono"];
-    $dni = $_POST["dni"];
-    $preferencias = $_POST["preferencias"];
-    $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
+// Obtener los datos enviados por POST
+$nombre = $_POST["nombre"];
+$apellido1 = $_POST["apellido1"];
+$apellido2 = $_POST["apellido2"];
+$direccion = $_POST["direccion"];
+$telefono = $_POST["telefono"];
+$dni = $_POST["dni"];
+$preferencias = $_POST["preferencias"];
+$contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
 
-    // Crear la consulta de inserción
-    $insertar = "INSERT INTO usuarios(nombre, apellido1, apellido2, direccion, telefono, dni, preferencias,contraseña)
-                VALUES('$nombre' ,'$apellido1', '$apellido2', '$direccion', '$telefono', '$dni', '$preferencias','$contraseña')";
+// Crear la consulta de inserción con prepared statements
+$stmt = $conexion->prepare("INSERT INTO usuarios(nombre, apellido1, apellido2, direccion, telefono, dni, preferencias, contraseña) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssssss", $nombre, $apellido1, $apellido2, $direccion, $telefono, $dni, $preferencias, $contraseña);
 
-    // Ejecutar la consulta
-    $resultado = mysqli_query($conexion, $insertar);
+// Ejecutar la consulta
+if ($stmt->execute()) {
+    echo "<script>
+            alert('Usuario registrado con éxito');
+            window.location='./socioexito.html';
+          </script>";
+} else {
+    echo "<script>
+            alert('Error al registrar usuario: " . $stmt->error . "');
+            window.history.go(-1);
+          </script>";
+}
 
-    // Comprobar si la inserción fue exitosa
-    if ($resultado) {
-        echo "<script>
-                alert('Usuario registrado con éxito');
-                window.location='/bibliotecaMDR/es/socios.html';
-              </script>";
-    } else {
-        echo "<script>
-                alert('Error al registrar usuario: " . mysqli_error($conexion) . "');
-                window.history.go(-1);
-              </script>";
-    }
-
-    // Cerrar la conexión después de terminar todas las operaciones
-    mysqli_close($conexion);
+// Cerrar la conexión
+$stmt->close();
+$conexion->close();
 ?>

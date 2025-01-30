@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -14,41 +16,34 @@ if ($conn->connect_error) {
 
 // Procesar el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $dni = isset($_POST['dni']) ? htmlspecialchars(trim($_POST['dni'])) : null;
-    $contraseña = isset($_POST['contraseña']) ? htmlspecialchars(trim($_POST['contraseña'])) : null;
+    $dni = isset($_POST['dni']) ? trim($_POST['dni']) : null;
+    $contraseña_ingresada = isset($_POST['contraseña']) ? trim($_POST['contraseña']) : null;
 
-    if ($dni && $contraseña) {
+    if ($dni && $contraseña_ingresada) {
         // Consultar el usuario en la base de datos
-        $sql = "SELECT * FROM usuarios WHERE dni = ?";
+        $sql = "SELECT contraseña FROM usuarios WHERE dni = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $dni);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt->bind_result($hash_guardado);
+        $stmt->fetch();
+        $stmt->close();
 
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-
-            // Depuración: Mostrar valores que se están comparando
-            // (Eliminar estas líneas en producción)
-            echo "Contraseña ingresada: " . $contraseña . "<br>";
-            echo "Hash en la base de datos: " . $user['contraseña'] . "<br>";
-
-            // Verificar la contraseña
-            if (password_verify($contraseña, $user['contraseña'])) {
-                session_start();
-                $_SESSION['dni'] = $user['dni'];
-                header("Location:socioexito.html");
+        // Verificar que se haya obtenido un hash
+        if ($hash_guardado) {
+            // Comparar la contraseña ingresada con el hash
+            if (password_verify($contraseña_ingresada, $hash_guardado)) {
+                $_SESSION['dni'] = $dni;
+                header("Location: socioexito.html");
                 exit();
             } else {
-                echo "Contraseña incorrecta.";
+                echo "<script>alert('Contraseña incorrecta'); window.history.go(-1);</script>";
             }
         } else {
-            echo "Usuario no encontrado.";
+            echo "<script>alert('Usuario no encontrado'); window.history.go(-1);</script>";
         }
-
-        $stmt->close();
     } else {
-        echo "Por favor, completa todos los campos.";
+        echo "<script>alert('Por favor, completa todos los campos.'); window.history.go(-1);</script>";
     }
 }
 

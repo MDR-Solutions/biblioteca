@@ -25,35 +25,36 @@
             </ul>
         </nav>
     </header>
+    <form action="insertar.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Ignacio" required>
     
-<form action="insertar.php" method="post">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Ej:Juan Ignacio" placeholder="Manolo " required>
-    <label for="apellido1" class="required">apellido1</label>
-    <input type="text" id="apellido1" name="apellido1" placeholder="Ej:Albin" placeholder="Garcia" required>
-   
-    <label for="apellido1" class="required">apellido2</label>
-    <input type="text" id="apellido2" name="apellido2" placeholder="Ej:Garcia" placeholder="Garcia" required>
-   
-    <label for="DNI" class="required">DNI</label>
-    <input type="text" id="DNI" name="DNI" placeholder="Ej:12345678X" placeholder="12345678X" required>
-   
-    <label for="Direccion" class="required">Direccion</label>
-    <input type="text" id="Direccion" name="Direccion" placeholder="Ej:Muskizko udala" placeholder="Muskizko udala" required>
-   
-    <label for="Telefono" class="required">Telefono</label>
-    <input type="text" id="Telefono" name="Telefono" placeholder="Ej:123456789" placeholder="123456789" required>
-   
-    <label for="Preferencias" class="required">Preferencias</label>
-    <input type="text" id="Preferencias" name="Preferencias" placeholder="Ej:Accion,Ficcion,Psicologia placeholder"="Accion,Ficcion,Psicologia placeholder" required>
-   
-    <label for="Contraseña">Contraseña</label>
-    <input type="text" id="Contraseña" name="contraseña" placeholder="Ej:Contraseña" placeholder="Ej:Contraseña" required><br>
+        <label for="apellido1">Primer Apellido</label>
+        <input type="text" id="apellido1" name="apellido1" placeholder="Ej: Albin" required>
     
-    <button type="submit">Crear Cuenta</button> <br>
-    <button type="submit" class="boton"><a href="login.html">¿Ya tienes cuenta?</a></button><br>
+        <label for="apellido2">Segundo Apellido</label>
+        <input type="text" id="apellido2" name="apellido2" placeholder="Ej: García" required>
     
-</form> 
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni" placeholder="Ej: 12345678X" required>
+    
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Ej: Muskizko udala" required>
+    
+        <label for="telefono">Teléfono</label>
+        <input type="number" id="telefono" name="telefono" placeholder="Ej: 123456789" required>
+    
+        <label for="preferencias">Preferencias</label>
+        <input type="text" id="preferencias" name="preferencias" placeholder="Ej: Acción, Ficción, Psicología" required>
+    
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Ej: Contraseña" required><br>
+    
+        <button type="submit" class="boton">Crear Cuenta</button> <br>
+        
+        <a href="login.html"><button type="button" class="boton">¿Ya tienes cuenta?</button></a><br><br><br><br><br>
+    </form>
+    
     <footer>
         <a class="Etiquetas" href="https://www.instagram.com/muskizudala" target="_blank"><img class="ubi" src="IMAGENES/insta.png" alt="Instagram"></a>
         <a class="Etiquetas" href="https://www.facebook.com/muskiz.bizkaialocale=es_LA" target="_blank"><img class="ubi" src="IMAGENES/Facebook_Logo_(2019).png" alt="Facebook"></a>
