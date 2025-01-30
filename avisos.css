@@ -60,16 +60,15 @@ form{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
 }
 
-/* Estilo para la imagen dentro del rectángulo */
-.rectangulo img {
+
+.rectangulo img {                  /* Estilo para la imagen dentro del rectángulo */
     width: 150px;                  /* Ancho de la imagen */
     height: auto;                  /* Mantiene la proporción de la imagen */
     margin-right: 20px;            /* Espacio entre la imagen y el texto */
     border-radius: 5px;            /* Bordes redondeados para la imagen */
 }
 
-/* Estilo para el contenedor de texto */
-.texto {
+.texto {                           /* Estilo para el contenedor de texto */
     font-size: 1.1em;              /* Tamaño del texto */
     color: #333;                   /* Color del texto */
     line-height: 1.5;              /* Altura de línea para mejorar la legibilidad */
@@ -132,8 +131,8 @@ body{
     filter: blur(3px);
 }
 
-/* Contenedor principal: activa flexbox */
-.container {
+
+.container {           /* Contenedor principal: activa flexbox */
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
     justify-content: center; /* Centra los elementos en la fila */
@@ -141,8 +140,7 @@ body{
     padding: 20px;
 }
 
-/* Cada rectángulo ahora se ajusta en línea */
-.rectangulo {
+.rectangulo {                /* Cada rectángulo ahora se ajusta en línea */
     display: flex;
     flex-direction: column; /* Coloca imagen arriba y texto abajo */
     align-items: center;
@@ -151,8 +149,7 @@ body{
     text-align: center;
 }
 
-/* Imagen ahora se centra */
-.rectangulo img {
+.rectangulo img {      /* Imagen ahora se centra */
     width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
     height: auto;
 }

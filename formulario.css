@@ -60,14 +60,15 @@ body{
 #ubi{
     width: 4%;
 }       
-footer{
+footer {
     background-color: chocolate;
-    clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
-    width:95%; 
-    padding:1%;
-    position: fixed; /*Para dejarlo fijado en todo momento*/
-    margin-bottom: 0%;
+    clear: both; /* Asegura que el footer esté debajo de los elementos flotantes */
+    width: 95%;
+    padding: 2%;
+    position: relative; /* O simplemente elimina la línea de 'position' */
+    margin-top: 250px; /* O ajusta según sea necesario */
 }
+
 
 .ubi{
     width: 2%;
@@ -75,6 +76,25 @@ footer{
 
 .Etiquetas {
     padding-left: 0.5%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buttons .reset {
+    background-color: #dc3545; /* Rojo para diferenciarlo del botón de envío */
+    color: white;
+
 }
 
 h2{
@@ -87,6 +107,7 @@ form{
     flex-direction: column;
     align-items: center;
     align-content: space-around;
+
     
 }
 
@@ -102,5 +123,13 @@ form{
     }
     .boton{
         margin-bottom: 15% ;
+    }
+    footer{ 
+        background-color: chocolate;
+        clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
+        width:95%; 
+        padding:2%;
+        position: fixed; /*Para dejarlo fijado en todo*/
+        bottom: 0%;
     }
 }
