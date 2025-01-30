@@ -1,19 +1,25 @@
-
-body{
-    background-color: burlywood;
-}
-.ubi{
-    width: 2%;
-}       
-footer{
+header {
+    background-color: chocolate;
+    width: 98%; /*width de 98 debido a que padding por cada lado 1% en total 100%*/
+    margin: auto; /*auto para centrar*/
+    padding: 1%;
+    margin-bottom: 14px;
     
-    clear:both;
-    width:100%; 
-
 }
+
+header h1 {
+    text-align: center;
+    color: black;
+    font-size: 300%;  
+}
+
 nav{
     background-color: chocolate;
-    font-size: 200%;  
+    font-size: 300%;  
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
 }
 
 nav a{
@@ -27,17 +33,13 @@ nav ul li{
 }
 
 ul {
-  overflow: hidden;
-}
-   
-li {
-  float: left;
-  margin-left: 7%;
-  padding: 16px;
+    overflow: hidden;
 }
 
+
+
 li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
-  background-color:black;
+    background-color:black;
 }
 
 header h1 {
@@ -52,16 +54,38 @@ header {
     margin-bottom: 14px;
 }
 div{
-   display: inline;
+    display: inline;
 }
-
+body{
+    background-color:  rgb(235, 167, 119);
+}
 article{
     clear: both;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.myf{
+    display: grid;
+    grid-template-columns:45% 45% ;  
+    gap: 10%;
+}
+.mapaint{
+    display: grid;
+    width: 95%;
+    height: 80%;
+}
 .LOGOMDR {
-    width: 25%; /* El tamaño en relación con el contenedor */
-    height: auto;
-    margin-left: 30%;
+    display: grid;
+    width: 65%; /* El tamaño en relación con el contenedor */
+    height:80%;
+    margin-left: 25%;
+    transition: transform 0.5s ease-in-out;
+    
+}
+.LOGOMDR IMG{
+    margin-right: 45%;
 }
 footer{
     background-color: chocolate;
@@ -71,11 +95,6 @@ footer{
     position: fixed; /*Para dejarlo fijado en todo momento*/
     bottom: 0%;
 }
-
-.ubi{
-    width: 2%;
-}   
-
 .Etiquetas {
     padding-left: 2%;
 }
@@ -92,4 +111,56 @@ section{
     padding-bottom: 1%;
     width:96%;
     margin-bottom: 7%;   
+}
+.LOGOMDR:hover{
+    transform: rotate(360deg);
+}
+footer{
+    background-color: chocolate;
+    clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
+    width:95%; 
+    padding:2%;
+    position: fixed; /*Para dejarlo fijado en todo*/
+    bottom: 0%;
+}
+
+.ubi{
+    width: 2%;
+}   
+
+.Etiquetas {
+    padding-left: 2%;
+}
+
+@media (max-width:800px){
+    .LOGOMDR{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+    .mapaint{
+        height: 75%;
+        width: 75%;
+    }
+    aside{
+        width: 96%;
+    }
+    .mapaint{
+        width: 85%;
+    }
+    section{
+        width: 96%;
+    }
+    section p, section h2, aside p, aside h3{
+        font-size: medium;
+    }
+    nav{
+        display: flex;
+        font-size: 200%;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

@@ -1,15 +1,3 @@
-/* Estilos para el catálogo */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color:  burlywood;
-}
-header h1 {
-    color: black;
-    font-size: 300%;  
-}
-
 header {
     background-color: chocolate;
     width: 98%; /*width de 98 debido a que padding por cada lado 1% en total 100%*/
@@ -17,11 +5,47 @@ header {
     padding: 1%;
     margin-bottom: 14px;
 }
+
+header h1 {
+    color: black;
+    font-size: 300%;  
+}
+nav{
+    background-color: chocolate;
+    font-size: 300%;  
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+nav a{
+    color: white;
+    text-shadow: 2px 2px 2px; /*Sombreado del texto*/
+    text-decoration: none;
+}
+nav ul li{
+    display: inline; /*Juntarlos en una linea y no uno encima del otro*/
+}
+ul {
+    overflow: hidden;
+}
+li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
+    background-color:black;
+}
+
+/* Estilos para el catálogo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:  burlywood;
+}
+
 .catalogo {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto auto auto auto;
     gap: 10px; 
-    justify-items: center;
+    
 }
 
 .libro {
@@ -49,58 +73,16 @@ header {
     font-size: 14px;
     color: #666;
 }
-button{
-    width: 10%;
-    padding: 2%;
-    border: 5%;
-    text-align: center;
-    float: center;
-}
-
-
 .ubi{
     width: 2%;
 }       
-footer{
-    background-color: chocolate;
-    clear:both;
-    width:100%; 
-}
-nav{
-    background-color: chocolate;
-    font-size: 200%;  
-}
 
-nav a{
-    color: white;
-    text-shadow: 2px 2px 2px; /*Sombreado del texto*/
-    text-decoration: none;
-}
-
-nav ul li{
-    display: inline; /*Juntarlos en una linea y no uno encima del otro*/
-}
-
-ul {
-  overflow: hidden;
-}
-   
-li {
-  float: left;
-  margin-left: 7%;
-  padding: 16px;
-}
-
-li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
-  background-color:black;
-}
-
-footer{
+footer{ 
     background-color: chocolate;
     clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
     width:95%; 
-    padding:1%;
-    position: fixed; /*Para dejarlo fijado en todo momento*/
+    padding:2%;
+    position: fixed; /*Para dejarlo fijado en todo*/
     bottom: 0%;
 }
 
@@ -110,4 +92,34 @@ footer{
 
 .Etiquetas {
     padding-left: 2%;
+    width: 200%;
+    height: auto;
+}
+@media (max-width:800px){
+    nav{
+        display: flex;
+        font-size: 200%;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .boton{
+        margin-bottom: 15% ;
+    }
+    h1{
+        text-align: center;
+    }
+    .libro img {
+        margin-left: 30%;
+    }
+    .catalogo{
+        display:grid;
+        grid-template-columns: auto;
+    }
+    .libro{
+        display: grid;
+        grid-template-columns: auto;
+    }
 }

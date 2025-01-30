@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h2>Rellena con tus datos para ser socio </h2>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="quienessomos.html">Quienes somos</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="socios.html">Mi cuenta</a></li>
+            <li><a href="avisos.html">Avisos</a></li>
+        </ul>
+    </nav>
+    
+    <div class="contenedor">
+
+    <h2>Login con DNI</h2>
+    <form  action="login.php" method="POST">
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" required><br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required><br>
+        <button type="submit">iniciar sesión</button>
+    </form>
+    </div>
+</body>
+</html>
