@@ -1,5 +1,5 @@
 <?php
-    include("conexion.php");
+("conexion.php");
 
     // Obtener los datos enviados por POST
     $nombre = $_POST["nombre"];
@@ -13,7 +13,7 @@
 
     // Crear la consulta de inserción
     $insertar = "INSERT INTO usuarios(nombre, apellido1, apellido2, direccion, telefono, dni, preferencias,contraseña)
-                VALUES('$nombre' ,'$apellido1', '$apellido2', '$direccion', '$telefono', '$dni', '$preferencias','$contraseña')";
+                VALUES('$nombre' , '$apellido1' , '$apellido2', '$direccion', '$telefono', '$dni', '$preferencias','$contraseña')";
 
     // Ejecutar la consulta
     $resultado = mysqli_query($conexion, $insertar);
@@ -22,8 +22,9 @@
     if ($resultado) {
         echo "<script>
                 alert('Usuario registrado con éxito');
-                window.location='/bibliotecaMDR/es/socios.html';
+                window.location='./socioexito.html';
               </script>";
+              
     } else {
         echo "<script>
                 alert('Error al registrar usuario: " . mysqli_error($conexion) . "');
