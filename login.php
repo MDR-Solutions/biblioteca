@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Hash en la base de datos: " . $user['contraseña'] . "<br>";
 
             // Verificar la contraseña
-            if (password_verify($contraseña, $user['contraseña'])) {
+            if (password_verify($contraseña === $user['contraseña'])) {
                 session_start();
                 $_SESSION['dni'] = $user['dni'];
                 header("Location:socioexito.html");
