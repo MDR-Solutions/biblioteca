@@ -156,7 +156,7 @@ body{
     width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
     height: auto;
 }
-footer{
+footer{ 
     background-color: chocolate;
     clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
     width:95%; 
