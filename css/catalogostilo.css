@@ -1,37 +1,4 @@
-header {
-    background-color: chocolate;
-    width: 98%; /*width de 98 debido a que padding por cada lado 1% en total 100%*/
-    margin: auto; /*auto para centrar*/
-    padding: 1%;
-    margin-bottom: 14px;
-}
-
-header h1 {
-    color: black;
-    font-size: 300%;  
-}
-nav{
-    background-color: chocolate;
-    font-size: 300%;  
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: space-around;
-}
-nav a{
-    color: white;
-    text-shadow: 2px 2px 2px; /*Sombreado del texto*/
-    text-decoration: none;
-}
-nav ul li{
-    display: inline; /*Juntarlos en una linea y no uno encima del otro*/
-}
-ul {
-    overflow: hidden;
-}
-li a:hover { /*hover=al pasar el ratón se visualiza una caja*/
-    background-color:black;
-}
+@import url(./estilo-base.css);
 
 /* Estilos para el catálogo */
 body {
@@ -64,6 +31,7 @@ body {
     object-fit: cover;
     border-radius: 15px;
 }
+
 .libro h3 {
     font-size: 16px;
     margin: 10px 0;
@@ -73,38 +41,8 @@ body {
     font-size: 14px;
     color: #666;
 }
-.ubi{
-    width: 2%;
-}       
 
-footer{ 
-    background-color: chocolate;
-    clear:both; /*Saltará a otra línea, no se ubica a la derecha*/
-    width:95%; 
-    padding:2%;
-    position: fixed; /*Para dejarlo fijado en todo*/
-    bottom: 0%;
-}
-
-.ubi{
-    width: 2%;
-}   
-
-.Etiquetas {
-    padding-left: 2%;
-    width: 200%;
-    height: auto;
-}
 @media (max-width:800px){
-    nav{
-        display: flex;
-        font-size: 200%;
-    }
-    nav a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
     .boton{
         margin-bottom: 15% ;
     }
@@ -121,5 +59,14 @@ footer{
     .libro{
         display: grid;
         grid-template-columns: auto;
+    }
+    nav{
+        display: flex;
+        font-size: 200%;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
