@@ -20,12 +20,6 @@
     border-radius: 8px;
 }
 
-#services {
-    width: 100%;
-    padding: 2%;
-    margin-bottom: 2%;
-}
-
 #service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -42,12 +36,6 @@
 
 .service-card:hover {
     transform: translateY(-5px);
-}
-
-.hours-location {
-    width: 95%;
-    margin: 2% auto;
-    padding: 2%;
 }
 
 .info-container {
@@ -68,37 +56,11 @@
     border-radius: 8px;
 }
 
-.news {
-    margin-top: 20px;
-}
-
 .news article {
     margin-bottom: 15px;
     padding: 10px;
     background-color: rgba(210, 105, 30, 0.8);
     border-radius: 8px;
-}
-
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links img {
-    width: 30px;
-    height: 30px;
-}
-
-.contact-info {
-    text-align: center;
 }
 
 .video-box {
@@ -121,8 +83,13 @@ footer {
     margin: 0 auto;
 }
 
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
 @media (max-width: 800px) {
-    .service-grid {
+    #service-grid {
         grid-template-columns: 1fr;
     }
     

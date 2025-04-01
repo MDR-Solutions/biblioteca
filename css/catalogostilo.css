@@ -1,18 +1,11 @@
 @import url(./estilo-base.css);
 
-/* Estilos para el catálogo */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color:  burlywood;
-}
-
 .catalogo {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px; 
-    
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 60px;
 }
 
 .libro {
@@ -35,6 +28,7 @@ body {
 .libro h3 {
     font-size: 16px;
     margin: 10px 0;
+    color: #333;
 }
 
 .libro p {
@@ -42,31 +36,12 @@ body {
     color: #666;
 }
 
-@media (max-width:800px){
-    .boton{
-        margin-bottom: 15% ;
+@media (max-width: 800px) {
+    .catalogo {
+        grid-template-columns: auto;
     }
-    h1{
-        text-align: center;
-    }
+    
     .libro img {
         margin-left: 30%;
-    }
-    .catalogo{
-        display:grid;
-        grid-template-columns: auto;
-    }
-    .libro{
-        display: grid;
-        grid-template-columns: auto;
-    }
-    nav{
-        display: flex;
-        font-size: 200%;
-    }
-    nav a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 }
