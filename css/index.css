@@ -134,4 +134,13 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
+    
+    .video-box {
+        width: 95%;
+        padding: 0.5rem;
+    }
+    
+    .video-box video {
+        max-height: 250px;
+    }
 }
