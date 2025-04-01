@@ -6,65 +6,99 @@
     <meta name="author" content="GRUPO-2 MDR-SOLUTIONS"> 
     <meta name="fecha" content="16-10-2024">
     <meta name="reto1" content="Web-1">
-    <meta name="keywords" content="biblioteca,municipal,ayuntamiento,libros"> <!--Palabras clave de la página-->
+    <meta name="keywords" content="biblioteca,municipal,ayuntamiento,libros,lectura,prestamo">
     <title>Biblioteca Municipal Muskiz</title>
-    <link rel="stylesheet" href="./css/index.css"> <!--Link al css  dsfsd-->
-    <link rel="icon" href="./media/logo-mdr.jpeg" type="image/x-icon"> <!--Icono de nuestra página-->
-    <script src=".js/juego.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./media/logo-mdr.jpeg" type="image/x-icon">
+    <script src="./js/juego.js"></script>
 </head>
 <body>
     <header>
-        <h1>LIBRERIA MUNICIPAL MUSKIZ</h1>
-        <nav> <!--Menú navegador-->
-            <ul> <!--ul>li*5-->
-                <li><a href="index.html">Inicio</a></li> <!--Pagina inicial-->
-                <li><a href="quienessomos.html">Quienes somos</a></li> <!--Pagina nosotros-->
-                <li><a href="catalogo.html">Catálogo</a></li> <!--Pagina catálogo-->
-                <li><a href="socios.html">Mi cuenta</a></li> <!--Pagina formulario-->
-                <li><a href="avisos.html">Avisos</a></lii> <!--Pagina noticias-->
+        <h1>Biblioteca Municipal de Muskiz</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./quienessomos.html">Quiénes somos</a></li>
+                <li><a href="./catalogo.html">Catálogo</a></li>
+                <li><a href="./socios.html">Mi cuenta</a></li>
+                <li><a href="./avisos.html">Avisos</a></li>
             </ul>
         </nav>
     </header>
-    <div class="informacion">
-        <section>
-            <h2> ¡Hola, Bienvenido!</h2> 
-            <p>Estás en la página web de biblioteca municipal de Muskiz. En esta página encontrarás todo tipo de libros. Para adquirirlos podras
-                visitar nuestra biblioteca fisica o  via online a traves de esta página. Para ver nuestro catálogo accede en el menú de navegación a catálogo. Deberás registrarte en
-                el apartado de navegación "Mi cuenta", y acceder a tus datos, historial de libros y tu lista de deseados. En el apartado "Quienes somos"
-                podrás conocer mejor la empresa que ha llevado a cabo este proyecto.
-            </p>
+    
+    <main class="informacion">
+        <section class="hero">
+            <h2>¡Bienvenido a tu biblioteca!</h2>
+            <p>Descubre un mundo de conocimiento, imaginación y aventura en nuestra colección.</p>
+            <div class="hero-images">
+                <img src="./media/muskizko-udal-liburutegia.jpg" alt="Biblioteca de Muskiz">
+            </div>
         </section>
-        <aside>
-            <h3>Funcionamiento</h3>
-            <p>Gracias a nuestra página podrás encontrar tus libros favoritos, estos pueden ser adquiridos mediante nuestra página web o 
-                acudiendo a nuestra biblioteca física. Tienes un máximo de 3 libros para tomar prestados a la vez, y un plazo de 2 semanas para
-                disfrutar de ellos. Al acabar ese periodo si los libros no son devueltos, pasarás a estar penalizado, esta penalización funciona 
-                de la siguiente manera: una vez pasados los 14 días,</p>
+        
+        <section id="services">
+            <h2>Nuestros Servicios</h2>
+            <div id="service-grid">
+                <div class="service-card">
+                    <h3>Préstamo de libros</h3>
+                    <p>Hasta 3 libros por 14 días. Renovación online disponible.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Espacio de estudio</h3>
+                    <p>Ambientes tranquilos con WiFi gratuito.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Actividades culturales</h3>
+                    <p>Club de lectura, talleres y eventos infantiles.</p>
+                </div>
+            </div>
+        </section>
+        
+        <aside id="news">
+            <h3>Novedades y Eventos</h3>
+            <article>
+                <h4>Nuevas adquisiciones</h4>
+                <p>Hemos ampliado nuestra colección con los últimos bestsellers.</p>
+            </article>
+            <article>
+                <h4>Club de lectura</h4>
+                <p>Únete a nuestro club que se reúne cada jueves a las 18:00.</p>
+            </article>
+            <div id="video-informacion" class="video-box">
+                <h4>Tour Virtual de Nuestra Biblioteca</h4>
+                <video controls>
+                    <source class="media" src="./media/854533-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
         </aside>
-    </div>
-    <section id="tablasection">
-        <table> <!--table>tr*3>td-->
-            <tr>
-                <td><img id="foto2"src="./media/biblio 2.jpg" alt="foto3"></td>
-            </tr>
-            <tr>
-                <td><img id="foto1" src= "./media/muskizko-udal-liburutegia.jpg" alt="foto1"></td>
-            </tr>
-            <tr>
-                <td>
-                    <video controls> <!--comando para video-->
-                        <source src="./media/854533-uhd_3840_2160_25fps.mp4" type="video/mp4">
-                    </video> 
-                </td>
-            </tr>
-        </table>
+    </main>
+    
+    <section id="hours-location">
+        <h2>Horario y Ubicación</h2>
+        <div class="info-container">
+            <div class="hours">
+                <h3>Horario de atención:</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+                <p>Sábados: 10:00 - 14:00</p>
+            </div>
+            <div class="map">
+                <img class="media" src="./media/biblio 2.jpg" alt="Ubicación de la biblioteca">
+            </div>
+        </div>
     </section>
-    <footer> <!--footer>a*4--> <!--Etiquetas=configuracion de los links-->
-            <a class="Etiquetas"  href="https://www.instagram.com/muskizudala/" target="_blank"><img class="ubi" src="./media/insta.png" alt="ig"></a>
-            <a class="Etiquetas" href="https://www.facebook.com/muskiz.bizkaia/?locale=es_LA" target="_blank"><img class="ubi" src="./media/Facebook_Logo_(2019).png" alt="gps"></a>
-            <a class="Etiquetas" href="https://maps.app.goo.gl/vuhthBsoVppb65tg9" target="_blank"><img class="ubi" src="./media/500745.png" alt="gps"></a>
-            <a class="Etiquetas" href="https://workspace.google.com/intl/es/gmail/" target="_blank">mdr_solutions@gmail.com</a>
-            <button type="button" onclick="juego()">Juego</button>
+    
+    <footer>
+        <div id="social-links" class="footer-box">
+            <a href="https://www.instagram.com/muskizudala/" target="_blank"><img src="./media/insta.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/muskiz.bizkaia/?locale=es_LA" target="_blank"><img src="./media/Facebook_Logo_(2019).png" alt="Facebook"></a>
+            <a href="https://maps.app.goo.gl/vuhthBsoVppb65tg9" target="_blank"><img src="./media/500745.png" alt="Ubicación"></a>
+        </div>
+        <div id="contact-info" class="footer-box">
+            <p>Biblioteca Municipal de Muskiz</p>
+            <p><a href="mailto:mdr_solutions@gmail.com">mdr_solutions@gmail.com</a></p>
+            <p>Teléfono: 944 123 456</p>
+        </div>
+        <button type="button" onclick="juego()">Juego</button>
     </footer>
 </body>
 </html>
