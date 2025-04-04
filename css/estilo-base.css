@@ -75,7 +75,7 @@ section, aside {
     color: white;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
     color: white;
     margin-bottom: 1rem;
     text-align: center;
