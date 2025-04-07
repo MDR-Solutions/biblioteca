@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$user = "root";
-$pass = "";
+$user = "admin";
+$pass = "admin";
 $db = "bdreto";
 
 $conexion = new mysqli($server, $user, $pass, $db);

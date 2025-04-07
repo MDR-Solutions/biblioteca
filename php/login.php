@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("conexion.php"); // Asegúrate de que este archivo establece correctamente la conexión en $conexion
+require("./conexion.php"); // Asegúrate de que este archivo establece correctamente la conexión en $conexion
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dni = isset($_POST['dni']) ? trim($_POST['dni']) : null;
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($hash_guardado) {
             if (password_verify($contraseña_ingresada, $hash_guardado)) {
                 $_SESSION['dni'] = $dni;
-                header("Location: socioexito.html");
+                header("Location: ../socioexito.html");
                 exit();
             } else {
                 echo "<script>alert('Contraseña incorrecta'); window.history.go(-1);</script>";

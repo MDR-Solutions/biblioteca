@@ -1,0 +1,47 @@
+@import url(./estilo-base.css);
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.libro {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.libro img {
+    width: 40%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.libro h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.libro p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 800px) {
+    .catalogo {
+        grid-template-columns: auto;
+    }
+    
+    .libro img {
+        margin-left: 30%;
+    }
+}
