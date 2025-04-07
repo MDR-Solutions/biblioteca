@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($hash_guardado) {
             if (password_verify($contraseña_ingresada, $hash_guardado)) {
                 $_SESSION['dni'] = $dni;
-                header("Location: socioexito.html");
+                header("Location: ../socioexito.html");
                 exit();
             } else {
                 echo "<script>alert('Contraseña incorrecta'); window.history.go(-1);</script>";

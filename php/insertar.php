@@ -1,5 +1,5 @@
 <?php
-require("conexion.php"); // Asegúrate de que este archivo establece correctamente la conexión en $conexion
+require("./conexion.php"); // Asegúrate de que este archivo establece correctamente la conexión en $conexion
 
 // Verificar si la petición es POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         echo "<script>
                 alert('Usuario registrado con éxito');
-                window.location='socioexito.html';
+                window.location='../socioexito.html';
               </script>";
     } else {
         echo "<script>
